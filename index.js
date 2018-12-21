@@ -126,7 +126,7 @@ m.sendMessage(args)
    client.on("message", message => {
     if (message.content === "b!support") {
      const embed = new Discord.RichEmbed()
-         .setColor("RANDOM")
+         .setColor("PURPULE")
          .addField('❤سيرفر الدعم الفني', `  https://discord.gg/NuQ2zYu  `)
      message.author.send({embed});
    
