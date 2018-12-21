@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "."
+var prefix = "t"
 
 
 
@@ -10,7 +10,7 @@ client.on("message", message => {
     if (message.content.startsWith("b!obc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
-  var argresult = args.join('.');
+  var argresult = args.join('t');
   message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
   m.send(`${argresult}\n ${m}`);
   })
@@ -23,7 +23,7 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = ".";
+  var prefix = "t";
 
   client.on("message", message => {
   
@@ -66,7 +66,7 @@ client.on('ready',  () => {
   client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('b!adminbc')){
+if (message.content.startsWith('t!adminbc')){
 if(!message.author.id === '476185102922285066') return;
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
@@ -99,13 +99,13 @@ m.sendMessage(args)
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
 
-       b!obc | لأرسال برود كاست للكل
+       t!obc | لأرسال برود كاست للكل
 
-       b!bc  |  لأرسال برود كاست للأونلاين
+       t!bc  |  لأرسال برود كاست للأونلاين
 
-       b!invite | لدعوة البوت الي سيرفرك
+       t!invite | لدعوة البوت الي سيرفرك
 
-       b!support | سيرفر السبورت** `)
+       t!support | سيرفر السبورت** `)
    message.author.sendEmbed(embed)
    
    }
@@ -113,7 +113,7 @@ m.sendMessage(args)
 
 
    client.on("message", message => {
-    if (message.content === "b!invite") {
+    if (message.content === "t!invite") {
      const embed = new Discord.RichEmbed()
          .setColor("RANDOM")
          .addField('Broadcast', `https://discordapp.com/api/oauth2/authorize?client_id=489960386339274771&permissions=8&scope=bot`)
@@ -164,4 +164,4 @@ client.on('ready', () => {
   
   });
 
-client.login(NTIwOTk4ODM1MzQzMDY1MTA5.Du2DUQ.lMK0eJvrQlxbUP2wxFIacyDktEo);
+client.login(process.env.BOT_TOKEN);
