@@ -10,7 +10,7 @@ client.on("message", message => {
     if (message.content.startsWith("t!obc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
-  var argresult = args.join('t');
+  var argresult = args.join('t!');
   message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
   m.send(`${argresult}\n ${m}`);
   })
@@ -79,7 +79,7 @@ m.sendMessage(args)
 
   
   client.on('message', msg => {
-    if(msg.content === 'b!help')
+    if(msg.content === 't!help')
     msg.reply('Check Your DM :white_check_mark:')
   });
   
