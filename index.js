@@ -160,7 +160,7 @@ m.sendMessage(args)
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag} !`);
-          client.user.setActivity("t!help | t!invite",{type: 'STREAMING'});
+          client.user.setActivity("t!help | t!invite",{type: 'WATCHING'});
   
   });
 
