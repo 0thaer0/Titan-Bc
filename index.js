@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "t"
+var prefix = "t!"
 
 
 
 //bc
 
 client.on("message", message => {
-    if (message.content.startsWith("b!obc")) {
+    if (message.content.startsWith("t!obc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join('t');
@@ -23,7 +23,7 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = "t";
+  var prefix = "t!";
 
   client.on("message", message => {
   
@@ -160,7 +160,7 @@ m.sendMessage(args)
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag} !`);
-          client.user.setActivity("t!help | t!invite",{type: 'Watching You'});
+          client.user.setActivity("t!help | t!invite",{type: 'STREAMING'});
   
   });
 
