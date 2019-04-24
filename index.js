@@ -1,16 +1,16 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "t!"
+var prefix = "m!"
 
 
 
 //bc
 
 client.on("message", message => {
-    if (message.content.startsWith("t!obc")) {
+    if (message.content.startsWith("m!obc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
-  var argresult = args.join('t!');
+  var argresult = args.join('m!');
   message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
   m.send(`${argresult}\n ${m}`);
   })
@@ -23,7 +23,7 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = "t!";
+  var prefix = "m!";
 
   client.on("message", message => {
   
@@ -46,7 +46,7 @@ client.on("message", message => {
 
 client.on('message', message => {
     var  user = message.mentions.users.first() || message.author;
-if (message.content.startsWith("t!avatar")) {
+if (message.content.startsWith("m!avatar")) {
 message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 }
 });
@@ -79,7 +79,7 @@ m.sendMessage(args)
 
   
   client.on('message', msg => {
-    if(msg.content === 't!help')
+    if(msg.content === 'm!help')
     msg.reply('Check Your DM :white_check_mark:')
   });
   
@@ -93,19 +93,19 @@ m.sendMessage(args)
   
   
   client.on("message", message => {
-    if (message.content === "t!help") {
+    if (message.content === "m!help") {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
 
-       t!obc | لأرسال برود كاست للكل
+       m!obc | لأرسال برود كاست للكل
 
-       t!bc  |  لأرسال برود كاست للأونلاين
+       m!bc  |  لأرسال برود كاست للأونلاين
 
-       t!invite | لدعوة البوت الي سيرفرك
+       m!invite | لدعوة البوت الي سيرفرك
 
-       t!support | سيرفر السبورت** `)
+       m!support | سيرفر السبورت** `)
    message.author.sendEmbed(embed)
    
    }
@@ -113,7 +113,7 @@ m.sendMessage(args)
 
 
    client.on("message", message => {
-    if (message.content === "t!invite") {
+    if (message.content === "m!invite") {
      const embed = new Discord.RichEmbed()
          .setColor("RANDOM")
          .addField('Broadcast', `https://discordapp.com/api/oauth2/authorize?client_id=489960386339274771&permissions=8&scope=bot`)
@@ -124,7 +124,7 @@ m.sendMessage(args)
 
 
    client.on("message", message => {
-    if (message.content === "b!support") {
+    if (message.content === "m!support") {
      const embed = new Discord.RichEmbed()
          .setColor("PURPULE")
          .addField('❤سيرفر الدعم الفني', `  https://discord.gg/NuQ2zYu  `)
@@ -138,7 +138,7 @@ m.sendMessage(args)
 
 
    client.on('message', message => {
-    if (message.content.startsWith("b!bot")) {
+    if (message.content.startsWith("m!bot")) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
@@ -160,7 +160,7 @@ m.sendMessage(args)
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag} !`);
-          client.user.setActivity("Titan Community",{type: 'STREAMING'});
+          client.user.setActivity("Mèxico Server",{type: 'STREAMING'});
   
   });
 
