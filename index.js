@@ -7,7 +7,7 @@ var prefix = "m!"
 //bc
 
 client.on("message", message => {
-    if (message.content.startsWith("m!obc")) {
+    if (message.content.startsWith("  ")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join('m!');
